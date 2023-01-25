@@ -1,6 +1,6 @@
 
 ```
-Capstone Project 2023                
+capstoneproj2023                //
 ├─ .readthedocs.yaml            //
 ├─ data                         //
 │  ├─ out                       //
@@ -23,9 +23,11 @@ Capstone Project 2023
 │  ├─ _config.yml               //
 │  └─ _toc.yml                  //
 ├─ requirements.txt             //
+├─ run.py                       //
 ├─ src                          //
 │  ├─ data                      //
 │  │  └─ make_dataset.py        //
+│  ├─ etl.py                    //
 │  ├─ features                  //
 │  │  └─ build_features.py      //
 │  ├─ models                    //
