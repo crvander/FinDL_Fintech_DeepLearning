@@ -1,6 +1,6 @@
 
 ```
-capstoneproj2023                //
+Capstone Project 2023                
 ├─ .readthedocs.yaml            //
 ├─ data                         //
 │  ├─ out                       //
@@ -24,17 +24,16 @@ capstoneproj2023                //
 │  └─ _toc.yml                  //
 ├─ requirements.txt             //
 ├─ run.py                       //
-├─ src                          //
-│  ├─ data                      //
-│  │  └─ make_dataset.py        //
-│  ├─ etl.py                    //
-│  ├─ features                  //
-│  │  └─ build_features.py      //
-│  ├─ models                    //
-│  │  ├─ predict_model.py       //
-│  │  └─ train_model.py         //
-│  └─ visualization             //
-│     └─ visualize.py           //
-└─ _README.md                   //
+└─ src                          //
+   ├─ data                      //
+   │  └─ make_dataset.py        //
+   ├─ etl.py                    //
+   ├─ features                  //
+   │  └─ build_features.py      //
+   ├─ models                    //
+   │  ├─ predict_model.py       //
+   │  └─ train_model.py         //
+   └─ visualization             //
+      └─ visualize.py           //
 
 ```
