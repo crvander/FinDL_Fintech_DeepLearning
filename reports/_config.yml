@@ -3,14 +3,14 @@
 
 # for html
 title: Capstone Project 2023
-logo: reports/figures/logo_png.png
+logo: figures/logo_png.png
 
 # for pdf/latex
 project: capstoneProj
 author: Carlos, Dylan, Cain
 sphinx:
   config:
-    latex_logo: 'reports/figures/logo_png.png'
+    latex_logo: 'figures/logo_png.png'
   extra_extensions:
     # - sphinx_inline_tabs
 
