@@ -1,4 +1,4 @@
-<!-- ```python
+```python
 import os
 import shutil
 
@@ -11,10 +11,9 @@ import shutil
     for item in files:
         shutil.copy(item, "reports")
 
-``` -->
+```
 
-<!-- # Welcome to your Jupyter Book -->
-Times Series and Sentiment Analysis for Finances
+# Welcome to your Jupyter Book
 
 This is a small sample book to give you a feel for how book content is
 structured.
