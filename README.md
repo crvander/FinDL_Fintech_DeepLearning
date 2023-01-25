@@ -1,14 +1,12 @@
 
 ```
-capstoneproj2023                //
+Capstone Project 2023                
 ├─ .readthedocs.yaml            //
 ├─ data                         //
 │  ├─ out                       //
 │  ├─ raw                       //
 │  └─ temp                      //
 ├─ LICENSE                      //
-├─ Makefile                     //
-├─ make_files.py                //
 ├─ notebooks                    //
 │  └─ figures                   //
 ├─ README.md                    //
@@ -25,24 +23,16 @@ capstoneproj2023                //
 │  ├─ _config.yml               //
 │  └─ _toc.yml                  //
 ├─ requirements.txt             //
-├─ setup.py                     //
 ├─ src                          //
 │  ├─ data                      //
-│  │  ├─ make_dataset.py        //
-│  │  └─ __init__.py            //
+│  │  └─ make_dataset.py        //
 │  ├─ features                  //
-│  │  ├─ build_features.py      //
-│  │  └─ __init__.py            //
+│  │  └─ build_features.py      //
 │  ├─ models                    //
 │  │  ├─ predict_model.py       //
-│  │  ├─ train_model.py         //
-│  │  └─ __init__.py            //
-│  ├─ visualization             //
-│  │  ├─ visualize.py           //
-│  │  └─ __init__.py            //
-│  └─ __init__.py               //
-├─ test_environment.py          //
-├─ tox.ini                      //
+│  │  └─ train_model.py         //
+│  └─ visualization             //
+│     └─ visualize.py           //
 └─ _README.md                   //
 
 ```
