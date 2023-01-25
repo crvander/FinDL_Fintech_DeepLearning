@@ -8,6 +8,7 @@ logo: figures/logo_png.png
 # for pdf/latex
 project: Capstone Project 2023
 author: Carlos van der Ley, Cain Chen, Dylan Newman, Gao Mo, Nathan Ng, Richard Tang, Xing Hong
+copyright: "2023"  # Copyright year to be placed in the footer
 sphinx:
   config:
     latex_logo: 'figures/logo_png.png'
