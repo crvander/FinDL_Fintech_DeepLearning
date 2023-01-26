@@ -35,7 +35,7 @@ bibtex_bibfiles:
 repository:
   url: https://github.com/crvander/capstoneproj2023  # Online location of your book
   path_to_book: reports  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: v1.2  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
