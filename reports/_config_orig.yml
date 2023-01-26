@@ -1,21 +1,20 @@
+# Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-#=====================================
-# Book settings
-title: My Jupyter Book  # The title of the book. Will be placed in the left navbar.
-author: The Jupyter Book community  # The author of the book
+# for html
+title: Capstone Project 2023
+logo: figures/logo_png.png
+
+# for pdf/latex
+project: Capstone Project 2023
+author: Carlos van der Ley, Cain Chen, Dylan Newman, Gao Mo, Nathan Ng, Richard Tang, Xing Hong
 copyright: "2023"  # Copyright year to be placed in the footer
-
-#for html
-logo: figures/logo_png.png  # A path to the book logo
-
-#for pdf/latex
-# logo: figures/logo_png.png  # A path to the book logo
 sphinx:
   config:
     latex_logo: 'figures/logo_png.png'
   extra_extensions:
     # - sphinx_inline_tabs
+
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
