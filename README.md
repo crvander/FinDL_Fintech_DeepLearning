@@ -1,8 +1,7 @@
 
 ```
-Capstone Project 2023                
+capstoneproj2023                //
 ├─ .readthedocs.yaml            //
-├─ .readthedocs_orig.yaml       //
 ├─ config                       //
 │  ├─ config.json               //
 │  ├─ data-params.yml           //
@@ -28,20 +27,22 @@ Capstone Project 2023
 │  ├─ notebooks.ipynb           //
 │  ├─ requirements_jb.txt       //
 │  ├─ _config.yml               //
-│  ├─ _config_orig.yml          //
 │  └─ _toc.yml                  //
 ├─ requirements.txt             //
 ├─ run.py                       //
-└─ src                          //
-   ├─ data                      //
-   │  └─ make_dataset.py        //
-   ├─ etl.py                    //
-   ├─ features                  //
-   │  └─ build_features.py      //
-   ├─ models                    //
-   │  ├─ predict_model.py       //
-   │  └─ train_model.py         //
-   └─ visualization             //
-      └─ visualize.py           //
+├─ src                          //
+│  ├─ data                      //
+│  │  └─ make_dataset.py        //
+│  ├─ etl.py                    //
+│  ├─ features                  //
+│  │  └─ build_features.py      //
+│  ├─ models                    //
+│  │  ├─ predict_model.py       //
+│  │  └─ train_model.py         //
+│  └─ visualization             //
+│     └─ visualize.py           //
+└─ test                         //
+   └─ test-data                 //
+      └─ financial_data.csv     //
 
 ```
