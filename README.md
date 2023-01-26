@@ -2,6 +2,13 @@
 ```
 Capstone Project 2023                
 ├─ .readthedocs.yaml            //
+├─ .readthedocs_orig.yaml       //
+├─ config                       //
+│  ├─ config.json               //
+│  ├─ data-params.yml           //
+│  ├─ model-config.yml          //
+│  ├─ test-params.yml           //
+│  └─ train-params.yml          //
 ├─ data                         //
 │  ├─ out                       //
 │  ├─ raw                       //
@@ -21,6 +28,7 @@ Capstone Project 2023
 │  ├─ notebooks.ipynb           //
 │  ├─ requirements_jb.txt       //
 │  ├─ _config.yml               //
+│  ├─ _config_orig.yml          //
 │  └─ _toc.yml                  //
 ├─ requirements.txt             //
 ├─ run.py                       //
