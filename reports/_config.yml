@@ -20,6 +20,7 @@ html:
 sphinx:
   config:
     latex_logo: 'figures/logo_png.png'
+    html_extra_path: ['_static']
   # extra_extensions:
     # - sphinx_inline_tabs
 
@@ -48,3 +49,4 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: true
