@@ -9,6 +9,12 @@ copyright: "2023"  # Copyright year to be placed in the footer
 #for html
 logo: figures/logo_png.png  # A path to the book logo
 
+html:
+    extra_footer: |
+        <div>
+            your html
+        </div>
+
 #for pdf/latex
 # logo: figures/logo_png.png  # A path to the book logo
 sphinx:
@@ -16,14 +22,6 @@ sphinx:
     latex_logo: 'figures/logo_png.png'
   # extra_extensions:
     # - sphinx_inline_tabs
-
-# HTML-specific settings
-html:
-  favicon: ""  # A path to a favicon image
-  use_edit_page_button: true  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
-  use_repository_button: true  # Whether to add a link to your repository button
-  use_issues_button: true  # Whether to add an "open an issue" button
-
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
