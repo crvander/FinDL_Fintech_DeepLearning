@@ -1,6 +1,7 @@
 
 ```
-capstoneproj2023                //
+Capstone Project 2023                
+
 ├─ .readthedocs.yaml            //
 ├─ config                       //
 │  ├─ config.json               //
