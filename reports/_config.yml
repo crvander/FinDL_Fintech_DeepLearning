@@ -9,12 +9,6 @@ copyright: "2023"  # Copyright year to be placed in the footer
 #for html
 logo: figures/logo_png.png  # A path to the book logo
 
-theme_options = {
-    ...
-    "extra_navbar": "<p>Your HTML</p>",
-    ...
-}
-
 #for pdf/latex
 # logo: figures/logo_png.png  # A path to the book logo
 sphinx:
