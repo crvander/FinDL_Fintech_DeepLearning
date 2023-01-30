@@ -7,4 +7,5 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks 
-- file: index.html
+- file: mark
+- file: index
