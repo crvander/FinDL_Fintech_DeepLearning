@@ -1,7 +1,7 @@
 # MARK page
 
-.. raw:: html
 
-    <blockquote>
-        There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.
-    </blockquote>
+
+<blockquote>
+    There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
