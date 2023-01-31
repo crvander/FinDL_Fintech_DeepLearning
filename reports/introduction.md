@@ -13,3 +13,6 @@ with small syntax extensions to allow you to write **roles** and **directives**
 in the Sphinx ecosystem.
 
 For more about MyST, see [the MyST Markdown Overview](https://jupyterbook.org/content/myst.html).
+
+## Another sub-chapter
+More content here...
