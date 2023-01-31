@@ -4,7 +4,12 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks 
-- file: test_md.md
+# - file: markdown
+# - file: notebooks
+# - file: markdown-notebooks 
+- file: abstract
+- file: introduction
+- file: methods
+- file: results
+- file: discussion
+- file: test_md

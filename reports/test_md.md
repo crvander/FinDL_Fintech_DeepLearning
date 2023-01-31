@@ -81,7 +81,8 @@ print("This is a test.")
 <script src="https://unpkg.com/thebe@latest/lib/index.js"></script>
 
 <pre data-executable="true" data-language="python">print("Hello!")</pre>
-<div class="thebe-activate"></div>
 
+<div class="thebe-activate"></div>
+<div class="thebe-status"></div>
 
 
