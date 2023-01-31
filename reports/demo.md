@@ -10,10 +10,10 @@ kernelspec:
   name: python3
 ---
 
-# MD page
+# Demo
 
 <blockquote>
-    There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.
+    I'm still checking how to run the code here...
 </blockquote>
 
 <!-- show input and output -->
