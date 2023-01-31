@@ -2,6 +2,7 @@
 ```
 Capstone Project 2023                
 
+capstoneproj2023                //
 ├─ .readthedocs.yaml            //
 ├─ config                       //
 │  ├─ config.json               //
@@ -20,13 +21,16 @@ Capstone Project 2023
 ├─ references                   //
 │  └─ references.bib            //
 ├─ reports                      //
+│  ├─ abstract.md               //
+│  ├─ demo.md                   //
+│  ├─ discussion.md             //
 │  ├─ figures                   //
 │  │  └─ logo_png.png           //
 │  ├─ intro.md                  //
-│  ├─ markdown-notebooks.md     //
-│  ├─ markdown.md               //
-│  ├─ notebooks.ipynb           //
+│  ├─ introduction.md           //
+│  ├─ methods.md                //
 │  ├─ requirements_jb.txt       //
+│  ├─ results.md                //
 │  ├─ _config.yml               //
 │  └─ _toc.yml                  //
 ├─ requirements.txt             //
