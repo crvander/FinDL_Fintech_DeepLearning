@@ -7,4 +7,4 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks 
-- file: test
+- file: test_md.md
