@@ -21,95 +21,41 @@ note = "Python syntax highlighting"
 print(note)
 ```
 
-<!-- hide input, show output
-{
-    "tags": [
-        "hide-input",
-    ]
-}
-
-import numpy as np
-import matplotlib.pyplot as plt
-plt.ion()
-
-data = np.random.randn(2, 100)
-fig, ax = plt.subplots()
-ax.scatter(*data, c=data[1], s=100*np.abs(data[0]));
+<!-- hide input, show output -->
+```{code-cell} ipython3
+:tags: ["hide-input"]
+print("This is a test.")
+```
 
 <!-- show input, hide output -->
-{
-    "tags": [
-        "hide-output"
-    ]
-}
-
-import numpy as np
-import matplotlib.pyplot as plt
-plt.ion()
-
-data = np.random.randn(2, 100)
-fig, ax = plt.subplots()
-ax.scatter(*data, c=data[1], s=100*np.abs(data[0]));
+```{code-cell} ipython3
+:tags: ["hide-output"]
+print("This is a test.")
+```
 
 <!-- hide input and output -->
-{
-    "tags": [
-        "hide-cell"
-    ]
-}
-
-import numpy as np
-import matplotlib.pyplot as plt
-plt.ion()
-
-data = np.random.randn(2, 100)
-fig, ax = plt.subplots()
-ax.scatter(*data, c=data[1], s=100*np.abs(data[0]));
+```{code-cell} ipython3
+:tags: ["hide-cell"]
+print("This is a test.")
+```
 
 <!-- remove input, show output -->
-{
-    "tags": [
-        "remove-input"
-    ]
-}
-
-import numpy as np
-import matplotlib.pyplot as plt
-plt.ion()
-
-data = np.random.randn(2, 100)
-fig, ax = plt.subplots()
-ax.scatter(*data, c=data[1], s=100*np.abs(data[0]));
+```{code-cell} ipython3
+:tags: ["remove-input"]
+print("This is a test.")
+```
 
 <!-- show input, remove output -->
-{
-    "tags": [
-        "remove-output"
-    ]
-}
-
-import numpy as np
-import matplotlib.pyplot as plt
-plt.ion()
-
-data = np.random.randn(2, 100)
-fig, ax = plt.subplots()
-ax.scatter(*data, c=data[1], s=100*np.abs(data[0]));
+```{code-cell} ipython3
+:tags: ["remove-output"]
+print("This is a test.")
+```
 
 <!-- remove all -->
-{
-    "tags": [
-        "remove-cell"
-    ]
-}
-
-import numpy as np
-import matplotlib.pyplot as plt
-plt.ion()
-
-data = np.random.randn(2, 100)
-fig, ax = plt.subplots()
-ax.scatter(*data, c=data[1], s=100*np.abs(data[0])); -->
+```{code-cell} ipython3
+:tags: ["remove-cell"]
+print("This is a test.")
+```
 
 
 
