@@ -16,6 +16,8 @@ sphinx:
     latex_logo: 'figures/logo_png.png'
   # extra_extensions:
     # - sphinx_inline_tabs
+  html_theme_options: 
+    use_download_button: false
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
