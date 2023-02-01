@@ -1,3 +1,6 @@
 {
-    "outdir": "test/testdata/"
+    "outdir_out": "data/out/",
+    "outdir_raw": "data/raw/",
+    "outdir_temp": "data/temp/",
+    "outdir_test": "data/test/"
 }
