@@ -1,3 +1,5 @@
 .git
-_config_orig.yml
-.readthedocs_orig.yaml
+.venv
+test.ipynb
+_requirements.txt
+data
