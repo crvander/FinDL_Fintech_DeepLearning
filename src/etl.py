@@ -2,6 +2,8 @@
 etl.py contains functions used to download, create, and save DataFrames
 '''
 
+
+
 # create and save data
 # import pandas as pd
 # import matplotlib.pyplot as plt
@@ -9,19 +11,18 @@ etl.py contains functions used to download, create, and save DataFrames
 # import csv
 # from sklearn.model_selection import train_test_split
 
+# def get_data(data_config):
 
-def get_data(data_config):
+#     df = pd.read_csv(data_config+test_data.csv, delimeter=',', encoding='latin-1', names=['label', 'text'])
 
-    df = pd.read_csv(data_config[outdir_test] + "/test_data.csv", delimeter=',', encoding='latin-1', names=['label', 'text'])
-
-    return df
+#     return df
 
 
-def save_data(data_config, data):
-    train, test = train_test_split(data, test_size=0.1)
-    train.to_csv('../data/temp/train.csv', index=False)
-    test.to_csv('../data/temp/test.csv', index=False)
-    return
+# def save_data(data_config, data):
+#     train, test = train_test_split(data, test_size=0.1)
+#     train.to_csv('../data/temp/train.csv', index=False)
+#     test.to_csv('../data/temp/test.csv', index=False)
+#     return
 
 
 # #============ my changes ================
@@ -34,3 +35,5 @@ def save_data(data_config, data):
 # def save_data():
 
 #     return
+
+# build train and test data for the model and save on data/temp
