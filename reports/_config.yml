@@ -9,7 +9,7 @@ copyright: "2023"  # Copyright year to be placed in the footer
 #for html
 logo: figures/logo_png.png  # A path to the book logo
 
-#for pdf/latex
+#for pdf/latex 
 # logo: figures/logo_png.png  # A path to the book logo
 sphinx:
   config:
