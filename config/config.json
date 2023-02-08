@@ -1,6 +1,10 @@
 {
+    "test_data": "test_load.csv", 
+    "raw_data": ["all-data.csv", "stock_data.csv", "tweets_labelled_09042020_16072020.csv"],
+    "temp_data": "myTempData.csv",
+
     "outdir_out": "data/out/",
     "outdir_raw": "data/raw/",
     "outdir_temp": "data/temp/",
     "outdir_test": "data/test/"
-} 
+}
