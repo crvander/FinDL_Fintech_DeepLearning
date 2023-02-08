@@ -1,8 +1,4 @@
 .venv
 test.ipynb
 _requirements.txt
-data/temp/train.csv
-data/temp/test.csv
-data/raw/all-data.csv
-data/raw/stock_data.csv
-data/raw/tweets_labelled_09042020_16072020
+# data
