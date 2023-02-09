@@ -1,0 +1,6 @@
+model_path: 'results' # folder path for all saved finetuned models
+model_name: 'bert-base-cased' # name of the model to run test and make prediction
+test_path: 'data/temp/test.csv' # the path for input test target 
+testdata_path: 'test/testdata/test.csv' # the path for input testrun dummy target, for submission
+output_dir: 'data/out' # save path for prediction output
+preds_name: 'preds.csv' # file name for prediction output

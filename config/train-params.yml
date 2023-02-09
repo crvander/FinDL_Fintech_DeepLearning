@@ -1,0 +1,15 @@
+input_path: 'data/temp' # the input path for training
+output_dir: 'results' # the output path for training, all finetuned models will be saved
+model_name: 'bert-base-cased' # the model name to be download from hugging face and saved after finetuned
+tokenizer_name: 'bert-base-cased' # the tokenized name to be download and saved after finetuned
+# model_name: 'ProsusAI/finbert'
+# tokenizer_name: 'ProsusAI/finbert'
+padding: 'max_length' # max padding length
+evaluation_strategy: 'epoch' # evaluation every epoch
+num_train_epochs: 5 # number of training epochs
+log_level: 'error' # log level
+report_to: 'none' # report to
+per_device_train_batch_size: 8 # training batch size
+metric_name: 'accuracy' # name for the evaluation metric
+# saving stragtegy for model checkpoints - "no": No save is done during training. "epoch": Save is done at the end of each epoch. "steps": Save is done every save_steps.
+save_strategy: 'no' 

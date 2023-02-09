@@ -1,0 +1,4 @@
+{
+    "dockerhub-id": "tim2000/dsc180-project:latest",
+    "build-script": "python3 run.py"
+}

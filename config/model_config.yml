@@ -1,0 +1,3 @@
+outpath: 'results' # folder path for all saved finetuned models
+models:
+    bert-base-cased.zip: '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8' # file name for bert based finetuned model
