@@ -29,5 +29,3 @@ def save_data(data_config, data):
     train, test = train_test_split(data, test_size=0.1)
     train.to_csv('{}/{}'.format(data_config['outdir_temp'], "train.csv"), index=False)
     test.to_csv('{}/{}'.format(data_config['outdir_temp'], "test.csv"), index=False)
-    # data.to_csv("data/temp/myData.csv", index=False)
-    # data.to_csv('{}/{}'.format(data_config['outdir_temp'], data_config['temp_data']), index=False)
