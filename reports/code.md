@@ -16,7 +16,7 @@ kernelspec:
 <!-- remove input, show output -->
 ```{code-cell} ipython3
 :tags: ["remove-input"]
-pip install pandas
+python -m pip install pandas
 import pandas as pd
 
 df = pd.DataFrame({'name': ['carlos', 'diane'], 'gender': ['male', 'female']})
