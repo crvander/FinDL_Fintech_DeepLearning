@@ -6,8 +6,8 @@ import time
 sys.path.insert(0, 'src')
 from data.make_dataset import download_data, generate_data, save_data
 from utils.download_models import download_models
-from train import train
-from test import test
+from models.train import train
+from models.test import test
 import logging
 
 def main(args):
