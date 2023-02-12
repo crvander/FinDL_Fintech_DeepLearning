@@ -8,12 +8,12 @@ import subprocess
 
 # open the configuration for model loading
 with open('config/model_config.yml', 'r') as file:
-    data_config = Box(yaml.full_load(file))
+    model_config = Box(yaml.full_load(file))
     
 
 def download_models():
-    destination = data_config.outpath # the output folder for models
-    models = data_config.models # list of pending models to download
+    destination = model_config.outpath # the output folder for models
+    models = model_config.models # list of pending models to download
     model_folder_path = "{}/{}".format(os.getcwd(), destination) # merge the file path
     model_folder_list = os.listdir(model_folder_path) # the directory list for saving folder
     

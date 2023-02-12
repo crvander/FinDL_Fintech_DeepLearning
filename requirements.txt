@@ -1,7 +1,6 @@
 certifi==2022.12.7
 charset-normalizer==3.0.1
 colorama==0.4.6
-etl==0.0.1
 filelock==3.9.0
 huggingface-hub==0.12.0
 idna==3.4
