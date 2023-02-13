@@ -14,16 +14,19 @@
 pip install -r requirements.txt
 
 # this will run the whole pipeline consists of downloading full dataset, generate data, 
-# downloading our finetuned models from google drive, unzip model folders, trainning process for new model,
+# downloading our finetuned models from google drive, unzip model folders,
 # predict sentiments on testing dataset
 
-python3 run.py generate_data download_models train test
+python run.py generate_data download_models test
+
+# trainning process based on pretrained models from HuggingFace
+python run.py generate_data train test
 
 # for default testing run (submission for Quater1), no argument needed
 # test run will download, unzip our finetuned models from google drive,
 # predict on dummy testdata(3 samples) and output predicted labels
 
-python3 run.py
+python run.py
 ```
 
 ### File structure and configuration
