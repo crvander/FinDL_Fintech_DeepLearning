@@ -8,5 +8,5 @@ data/raw/stock_data.csv
 data/raw/tweets_labelled_09042020_16072020
 test2.ipynb
 __pycache__/run.cpython-310.pyc
-__pycache__/version.cpython-310.pyc
+# __pycache__/version.cpython-310.pyc
 src/__pycache__/etl.cpython-310.pyc 
