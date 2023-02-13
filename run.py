@@ -1,33 +1,64 @@
-#!/usr/bin/env python
- 
 import sys
-import json
+import yaml
+from box import Box
 import pandas as pd
-
+import time
 sys.path.insert(0, 'src')
-from etl import get_data, save_data
+from data.make_dataset import download_data, generate_data, save_data
+from utils.download_models import download_models
+from models.train import train
+from models.test import test
+import logging
 
-def main(targets):
+def main(args):
+    logging.basicConfig(filename='myapp.log', level=logging.INFO)
+    logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+    logging.info(args)
 
-    data_config = json.load(open('config/config.json'))
+    
+    if 'generate_data' in args: # will not be run in testrun for submission
+        logging.info('loading data-params...')
+        with open('config/data-params.yml', 'r') as file: # All config will be read in module files
+            data_config = Box(yaml.full_load(file))
+        logging.info(data_config) # here only for logging
+        
+        download_data()
+        df = generate_data()
+        save_data(df)
+    
+    if 'download_models' in args: # run for dev and testing
+        with open('config/model_config.yml', 'r') as file: 
+            model_config = Box(yaml.full_load(file))
+        logging.info(model_config)
+        
+        download_models()
+        
+    with open('config/model_config.yml', 'r') as file: # run by default for submission requirements
+        model_config = Box(yaml.full_load(file))
+        logging.info(model_config)
+        
+        download_models()
+        
+        
+    if 'train' in args: # will not be run in testrun for submission
+        logging.info('loading training-params...')
+        with open('config/train-params.yml', 'r') as file:
+            train_config = Box(yaml.full_load(file))
+        logging.info(train_config)
 
-    if 'test' in targets:
+        start = time.time()
+        trainer = train()
+        end = time.time()
+        logging.info('training time: ' + str(end - start))
+    
+    if 'test' in args: # test on test dataset
+        logging.info('test run start...')
+        test(test_target = 'test', test_lines = 3)
+    else: # test run for submission
+        logging.info('testing start...')
+        test(test_target = 'testing', test_lines = 20)
+    return
 
-        data = get_data(data_config)
-        save_data(data_config, data) #load and train the model with test_load data
-        # return print("test ok")
-        return
-
-    elif 'run' in targets:
-
-        return print("run ok")
-
-    else:
-
-        return print("error target")
 
 if __name__ == '__main__':
-
-    targets = sys.argv[1:]
-    # targets = 'testdata'
-    main(targets)
+    main(sys.argv[1:]) 
