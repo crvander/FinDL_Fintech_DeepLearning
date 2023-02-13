@@ -456,3 +456,119 @@ INFO:root:loading test data from test/testdata/test.csv ...
 INFO:root:predicting ...
 INFO:root:saving predictions to data/out ...
 INFO:root:testing done
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:downloading from google shared id: 1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8
+INFO:root:saving model as name: bert-base-cased.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023/results/bert-base-cased.zip
+INFO:root:downloading from google shared id: 1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr
+INFO:root:saving model as name: finbert.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023/results/finbert.zip
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:downloading from google shared id: 1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8
+INFO:root:saving model as name: bert-base-cased.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023/results/bert-base-cased.zip
+INFO:root:downloading from google shared id: 1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr
+INFO:root:saving model as name: finbert.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023/results/finbert.zip
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:downloading from google shared id: 1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8
+INFO:root:saving model as name: bert-base-cased.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023/results/bert-base-cased.zip
+INFO:root:downloading from google shared id: 1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr
+INFO:root:saving model as name: finbert.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023/results/finbert.zip
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023/results: 
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'bert-base-cased.zip': '1RCbC2rCkckt7K1ZZ_hT6DTUFKubFk3_8', 'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:loading test data from data/temp/test.csv ...
+INFO:root:predicting ...
+INFO:root:saving predictions to data/out ...
+INFO:root:testing done
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:downloading from google shared id: 1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr
+INFO:root:saving model as name: finbert.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023\results/finbert.zip
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:downloading from google shared id: 1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr
+INFO:root:saving model as name: finbert.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023\results/finbert.zip
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:[]
+INFO:root:{'outpath': 'results', 'models': {'finbert.zip': '1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr'}}
+INFO:root:downloading to D:\Workspace\DSC 180B\capstoneproj2023\results: 
+INFO:root:downloading from google shared id: 1UGx_rTooMhU5FamNc-CDhdZevIhMJBWr
+INFO:root:saving model as name: finbert.zip
+INFO:root:saving path: D:\Workspace\DSC 180B\capstoneproj2023\results/finbert.zip
+INFO:root:testing start...
+INFO:root:initiate testing from results/finbert/ ...
+INFO:root:loading test data from test/testdata/test.csv ...
+INFO:root:predicting ...
+INFO:root:saving predictions to data/out ...
+INFO:root:testing done

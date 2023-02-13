@@ -22,9 +22,9 @@ with open('config/test-params.yml', 'r') as file:
 def test(test_target = 'test', test_lines = 3):
     out = []
     if test_target == 'test':
-        input_path = testdata_path
-    if test_target == 'testing':
         input_path = test_path
+    if test_target == 'testing':
+        input_path = testdata_path
     # access the finetuned model
     model_full_path = '{}/{}/'.format(model_path, model_name)
     logging.info('initiate testing from {} ...'.format(model_full_path))
