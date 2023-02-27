@@ -1,4 +1,4 @@
-# References
+# 7. References
 
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez,
 Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Advances in neural in-
