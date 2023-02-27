@@ -1,15 +1,5 @@
 # Discussion
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
-This is a simple file to help you get started and show off some syntax.
-
-## What is MyST?
-
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem. 
-
-For more about MyST, see [the MyST Markdown Overview](https://jupyterbook.org/content/myst.html).
+Many works attempt to capture the price movement of the financial instruments. This project and the following package can be used for finance companies deploying models for automatic document classification. In this case, they will need approaches that can scale well and are simple to deploy, but have no need to train or fine-tune the model. By using the package we provide, they are able to search the model and use a pretrained and fine-tuned classification model designed for accurate, fast inference. If needed, continuing training on user customized data is possible. They were able to run and deploy the model directly from our package with no required research or ML expertise.
+Risk is also an important attribute of financial instruments. For the purpose of detecting risk, we
+will build handy scraping tools to extract annual financial reports from the Security and Exchange Commission (SEC), which consists of Risk Factors and other crucial information in terms of investment. In other words, this package enables consultants to build a dynamic portfolio and monitor assets through market sentiment and evaluate the risk of a company from the financial reports.

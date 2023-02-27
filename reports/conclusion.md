@@ -1,0 +1,4 @@
+# Conclusion
+
+Using a combination of different models we were able to achieve an accuracy above baseline model, although they are not significantly outperforming the baseline model, but it’s as we expected given that our future plan consists of further training and fine tuning. Along with that, our F1 score was above baseline model as well. Looking at the F1 score is important in addition to the accuracy as it allows us to get a better sense of the data even if the distribution of the data is uneven. When feeding in data in real time, there may be a large influx of either positive or negative tweets about a certain stock that can skew the data. Overall, we were very pleased with the performance of our models and are excited to further increase the performance and utilities of our package next quarter.
+
