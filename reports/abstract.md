@@ -1,4 +1,4 @@
-# Abstract
+# 1. Abstract
 
 Textual data in the financial domain is becoming increasingly important as the number of financial documents rapidly grows. With the progress in natural language processing (NLP), extracting valuable information has gained popularity among researchers, deep learning has boosted the development of effective financial text mining models and made significant breakthroughs in various Natural Language Processing tasks. State-of-the-art models such as BERT (Devlin et al., 2019) model developed by Google, GPT2 (Radford et al., 2018) by OpenAI, XL- Net (Yang et al.,2019), pre-trained on a large scale of unlabeled texts from various corpuses, have shown their effectiveness by achieving good results on general domain data. 
 
