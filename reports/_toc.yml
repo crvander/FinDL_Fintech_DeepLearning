@@ -1,6 +1,7 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 
+title: New Title
 format: jb-book 
 # root: 
 root: abstract
