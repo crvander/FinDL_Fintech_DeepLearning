@@ -7,7 +7,7 @@ from box import Box
 #Have more data, do staggered times, add in stuff from before, 100 per day last 30 days, company name, date
 #Initialize the API with your credentials
 
-with open('config\twitter_credentials.yml', 'r') as file:
+with open('config/twitter_credentials.yml', 'r') as file:
     twitter_config = Box(yaml.full_load(file))
 
 api = Api(
