@@ -6,7 +6,7 @@ import logging
 from box import Box
 import yaml
 import os
-from .twitter.pull_tweets import call_stock
+from ..twitter.pull_tweets import call_stock
 
 # access config files and extract necessary parameters
 with open('config/data-params.yml', 'r') as file:
