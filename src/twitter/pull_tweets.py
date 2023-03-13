@@ -1,15 +1,18 @@
 from twitter import Api
-import twitter_credentials #twitter_credentials is a python file that contains the API keys but dummy ones are shown here for security reasons
 import pandas as pd
 from datetime import datetime, timedelta
 
 #Have more data, do staggered times, add in stuff from before, 100 per day last 30 days, company name, date
 #Initialize the API with your credentials
+
+with open('twitter_credentials.yml', 'r') as file:
+    twitter_config = Box(yaml.full_load(file))
+
 api = Api(
-    consumer_key=twitter_credentials.CONSUMER_KEY,
-    consumer_secret=twitter_credentials.CONSUMER_SECRET,
-    access_token=twitter_credentials.ACCESS_TOKEN,
-    access_secret=twitter_credentials.ACCESS_TOKEN_SECRET
+    consumer_key=twitter_config.CONSUMER_KEY,
+    consumer_secret=twitter_config.CONSUMER_SECRET,
+    access_token=twitter_config.ACCESS_TOKEN,
+    access_secret=twitter_config.ACCESS_TOKEN_SECRET
 )
 
 # access config files and extract necessary parameters
