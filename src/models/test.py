@@ -21,10 +21,24 @@ with open('config/test-params.yml', 'r') as file:
 
 # function to test the model on test data
 def test(test_target = 'test', test_lines = 3):
+
+ # run the testing process on GPUs, if possible 
+    if torch.cuda.is_available():
+        device = torch.device('cuda')
+        logging.info('There are %d GPU(s) available.' % torch.cuda.device_count())
+        logging.info('We will use the GPU: ', torch.cuda.get_device_name(0))
+    
+    else:
+        logging.info('No GPU available, using the CPU instead. WARNING: training may take long')
+        device = torch.device('cpu')
+        
+        
     if test_target == 'test':
         input_path = test_path
     if test_target == 'testing':
         input_path = testdata_path
+        
+        
     # access the finetuned model
     model_full_path = '{}/{}/'.format(model_path, model_name)
     logging.info('initiate testing from {} ...'.format(model_full_path))
@@ -50,6 +64,16 @@ def test(test_target = 'test', test_lines = 3):
     return
     
 def prediction():
+ # run the prediction process on GPUs, if possible 
+    if torch.cuda.is_available():
+        device = torch.device('cuda')
+        logging.info('There are %d GPU(s) available.' % torch.cuda.device_count())
+        logging.info('We will use the GPU: ', torch.cuda.get_device_name(0))
+    
+    else:
+        logging.info('No GPU available, using the CPU instead. WARNING: training may take long')
+        device = torch.device('cpu')
+
     out = []
     input_path = target_path
     # access the finetuned model
@@ -66,16 +90,17 @@ def prediction():
     logging.info('predicting on each day...')
     # target data prediction
     for day in dictionary:
+        logging.info('predicting on {}...'.format(day))
         sum_sentiment = 0
         prediction = pipeline(dictionary[day])
         for item in prediction:
-            print(item)
-            print(type(item))
-            if item[0] == 'positive':
+            print(item[0]['label'])
+            if item[0]['label'] == 'positive':
                 sum_sentiment += 1
-            elif item[0] == 'negative':
+            elif item[0]['label'] == 'negative':
                 sum_sentiment -= 1
         avg_daily_prediction = sum_sentiment/len(prediction)
+        logging.info('save average sentiment on {}...'.format(day))
         out.append({"daily sentiment": avg_daily_prediction, "date" : day})   
     
     
