@@ -32,3 +32,4 @@ threadpoolctl
 tqdm
 transformers
 urllib3
+python-twitter
