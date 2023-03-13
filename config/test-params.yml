@@ -1,4 +1,4 @@
-model_path: 'results/temp' # folder path for all saved finetuned models
+model_path: 'results' # folder path for all saved finetuned models
 #model_name: 'bert-base-cased' # name of the model to run test and make prediction
 model_name: 'finbert'
 test_path: 'data/temp/test.csv' # the path for input test target 
