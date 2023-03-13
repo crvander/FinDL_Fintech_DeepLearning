@@ -36,7 +36,3 @@ def download_models():
                 zip.extractall(path = model_folder_path)
                 print('Done! Extracted to {}'.format(model_folder_path))
             os.remove(full_path) # delet the zipped files to save disk memory
-     
-
-    
-

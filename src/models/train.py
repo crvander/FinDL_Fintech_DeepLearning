@@ -82,4 +82,5 @@ def train():
     trainer.save_model(model_name)
     logging.info(trainer.train())
     logging.info('training done.')
+    logging.info('traning ' + evaluation_strategy + ': ' + str(trainer.evaluate()))
     return model_name
