@@ -54,7 +54,7 @@ def main(args):
     if 'test' in args: # test on test dataset
         logging.info('test run start...')
         test(test_target = 'test', test_lines = 3)
-    elif 'test_run': # test run for submission
+    elif 'test_run' in args: # test run for submission
         logging.info('testing start...')
         test(test_target = 'testing', test_lines = 20)
         
