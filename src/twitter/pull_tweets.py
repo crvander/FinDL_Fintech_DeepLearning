@@ -1,4 +1,4 @@
-from pytwitter import Api
+from twitter import Api
 import twitter_credentials #twitter_credentials is a python file that contains the API keys but dummy ones are shown here for security reasons
 import pandas as pd
 from datetime import datetime, timedelta
