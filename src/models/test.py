@@ -69,9 +69,11 @@ def prediction():
         sum_sentiment = 0
         prediction = pipeline(dictionary[day])
         for item in prediction:
-            if item['label'] == 'positive':
+            print(item)
+            print(type(item))
+            if item[0] == 'positive':
                 sum_sentiment += 1
-            elif item['label'] == 'negative':
+            elif item[0] == 'negative':
                 sum_sentiment -= 1
         avg_daily_prediction = sum_sentiment/len(prediction)
         out.append({"daily sentiment": avg_daily_prediction, "date" : day})   
