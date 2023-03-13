@@ -5,6 +5,7 @@ import pandas as pd
 import time
 sys.path.insert(0, 'src')
 from data.make_dataset import download_data, generate_data, save_data
+from twitter.pull_tweets import call_stock
 from utils.download_models import download_models
 from models.train import train
 from models.test import test, prediction
@@ -59,6 +60,8 @@ def main(args):
         test(test_target = 'testing', test_lines = 20)
         
     if 'predict' in args:
+        logging.info('fetching and processing twitter data...')
+        call_stock()
         logging.info('prediction on tweets start...')
         prediction()
     return
