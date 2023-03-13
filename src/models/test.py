@@ -21,7 +21,6 @@ with open('config/test-params.yml', 'r') as file:
 
 # function to test the model on test data
 def test(test_target = 'test', test_lines = 3):
-    out = []
     if test_target == 'test':
         input_path = test_path
     if test_target == 'testing':
@@ -65,16 +64,26 @@ def prediction():
     logging.info('grouping text by day...'.format(input_path))
     dictionary = df.groupby('timestamp')['tweet'].apply(list).to_dict()
     logging.info('predicting on each day...')
-    # test data prediction
-    prediction = pipeline(testdata)
+    # target data prediction
+    for day in dictionary:
+        sum_sentiment = 0
+        prediction = pipeline(dictionary[day])
+        for item in prediction:
+            if item['label'] == 'positive':
+                sum_sentiment += 1
+            elif item['label'] == 'negative':
+                sum_sentiment -= 1
+        avg_daily_prediction = sum_sentiment/len(prediction)
+        out.append({"daily sentiment": avg_daily_prediction, "date" : day})   
     
-    logging.info('saving predictions to {} ...'.format(output_dir))
+    
+    logging.info('saving daily average sentiment to {} ...'.format(output_dir))
     myFile = open('{}/{}'.format(output_dir,preds_name), 'w')
     writer = csv.writer(myFile)
-    writer.writerow(['label', 'score'])
-    for i in prediction: # write the prediction label to csv file
+    writer.writerow(['label', 'date'])
+    for i in out: # write the prediction label to csv file
         writer.writerow(i[0].values()) 
     myFile.close()        
                 
-    logging.info('testing done')
+    logging.info('prediction done')
     return
