@@ -23,7 +23,7 @@ python run.py generate_data download_models test
 python run.py generate_data train test
 
 # for predict based on tweets data from twitter API
-python run.py download_models prediction
+python run.py download_models predict
 
 # for default testing run (submission for Quater1), 
 # test run will download, unzip our finetuned models from google drive,
