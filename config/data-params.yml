@@ -13,13 +13,13 @@ ds3_path: "utkarshxy/stock-markettweets-lexicon-data" # read path for third data
 df1_name: "all-data.csv" # save name for first dataset
 df2_name: "stock_data.csv" # save name for second dataset
 df3_name: "tweets_labelled_09042020_16072020.csv" # save name for third dataset
-df4_name: "tweets.csv" # Dylan's tweet raw data
+df4_name: "tweets_processed.csv" # Dylan's tweet raw data
 
 save_path: "data/temp/" # save path for all processed data
 save_path_raw: "data/raw" # save path for raw datasets
 train_name: "train.csv" # file name for training data 
 test_name: "test.csv" # file name for testing data 
 
-query = "AAPL"
-time_window = 30
-max_results = 100
+query: "AAPL"
+time_window: 30
+max_results: 100
