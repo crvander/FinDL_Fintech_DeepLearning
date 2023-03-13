@@ -6,6 +6,7 @@ import logging
 from box import Box
 import yaml
 import os
+from twitter.pull_tweets import call_stock
 
 # access config files and extract necessary parameters
 with open('config/data-params.yml', 'r') as file:
@@ -24,18 +25,23 @@ expand = data_config.expand
 ds1 = data_config.ds1_name
 ds2 = data_config.ds2_name
 ds3 = data_config.ds3_name
-#     ds4...
+ds4 = data_config.ds4_name
 
 # datasets path from source
 ds1_path = data_config.ds1_path
 ds2_path = data_config.ds2_path
 ds3_path = data_config.ds3_path
-#     ds4...
+ds4_path = data_config.ds4_path
 
 # file name for reading the files in saved dataset
 df1_name = data_config.df1_name
 df2_name = data_config.df2_name
 df3_name = data_config.df3_name
+df4_name = data_config.df4_name
+
+query = = data_config.query
+time_window = data_config.time_window
+max_results = data_config.max_results
 
 # function to pull online data from API
 def download_data():
@@ -60,7 +66,6 @@ def generate_data():
                       names=['sentiment', 'text']) # read first data
     df2 = pd.read_csv('{}/{}'.format(save_path_raw, df2_name)) # read second data
     df3 = pd.read_csv('{}/{}'.format(save_path_raw, df3_name), on_bad_lines='skip', sep=';') # read third data
-    # df4 = ... Dylan's api
     logging.info('datasets loaded')
 
     # function to convert sentiment labels to numerical values
@@ -92,11 +97,22 @@ def generate_data():
 
 # function to save the processed dataset
 def save_data(df):
-        logging.info('train test with {} split, random state {}'.format(split, str(random_state)))
-        # split the dataset into training and testing sets.
-        train, test = train_test_split(df, test_size=split, random_state = random_state)
-        logging.info('saving training and testing data...')
-        train.to_csv(save_path + train_name, index=False) # save training data
-        test.to_csv(save_path + test_name, index=False) # save testing data
-        logging.info('training and testing saved at {}') 
-        return
+    logging.info('train test with {} split, random state {}'.format(split, str(random_state)))
+    # split the dataset into training and testing sets.
+    train, test = train_test_split(df, test_size=split, random_state = random_state)
+    logging.info('saving training and testing data...')
+    train.to_csv(save_path + train_name, index=False) # save training data
+    test.to_csv(save_path + test_name, index=False) # save testing data
+    logging.info('training and testing saved at {}') 
+    return
+        
+def generate_tweet(query = query, time_window = time_window, max_results = max_results):
+    logging.info('calling tweets api...')
+    call_stock(query, time_window, max_results)
+    logging.info('reading tweets raw data and process...')
+    df4 = pd.read_csv('{}/{}'.format(save_path_raw, ds4_name)) # read tweets raw data
+    df4 = df4.drop(["query"], axis = 1)
+    df4['timestamp'] = df4['timestamp'].str[:10]
+    logging.info('saving proccesed tweets data...')
+    df4.to_csv(save_path + df4_name, index=False)
+    
