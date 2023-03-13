@@ -7,7 +7,7 @@ sys.path.insert(0, 'src')
 from data.make_dataset import download_data, generate_data, save_data
 from utils.download_models import download_models
 from models.train import train
-from models.test import test
+from models.test import test, prediction
 import logging
 
 def main(args):
@@ -58,7 +58,11 @@ def main(args):
         logging.info('testing start...')
         test(test_target = 'testing', test_lines = 20)
     return
-
+    
+    if 'predict' in args:
+        logging.info('prediction on tweets start...')
+        prediction()
+        
 
 if __name__ == '__main__':
     main(sys.argv[1:]) 
