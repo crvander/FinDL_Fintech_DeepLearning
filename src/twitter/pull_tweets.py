@@ -1,4 +1,4 @@
-from twitter import Api
+from pytwitter import Api
 import pandas as pd
 from datetime import datetime, timedelta
 import yaml
