@@ -94,22 +94,21 @@ def prediction():
         sum_sentiment = 0
         prediction = pipeline(dictionary[day])
         for item in prediction:
-            print(item[0]['label'])
             if item[0]['label'] == 'positive':
                 sum_sentiment += 1
             elif item[0]['label'] == 'negative':
                 sum_sentiment -= 1
         avg_daily_prediction = sum_sentiment/len(prediction)
-        logging.info('save average sentiment on {}...'.format(day))
-        out.append({"daily sentiment": avg_daily_prediction, "date" : day})   
+        logging.info('save average sentiment {} on {}...'.format(avg_daily_prediction, day))
+        out.append({"label": avg_daily_prediction, "date" : day})   
     
-    
+    print(out)
     logging.info('saving daily average sentiment to {} ...'.format(output_dir))
     myFile = open('{}/{}'.format(output_dir,preds_name), 'w')
     writer = csv.writer(myFile)
     writer.writerow(['label', 'date'])
     for i in out: # write the prediction label to csv file
-        writer.writerow(i[0].values()) 
+        writer.writerow(i.values()) 
     myFile.close()        
                 
     logging.info('prediction done')
