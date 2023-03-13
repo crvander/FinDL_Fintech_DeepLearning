@@ -39,7 +39,7 @@ df2_name = data_config.df2_name
 df3_name = data_config.df3_name
 df4_name = data_config.df4_name
 
-query = = data_config.query
+query = data_config.query
 time_window = data_config.time_window
 max_results = data_config.max_results
 
