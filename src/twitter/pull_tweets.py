@@ -22,7 +22,7 @@ with open('config/data-params.yml', 'r') as file:
     data_config = Box(yaml.full_load(file))
     
 save_path = data_config.save_path_raw
-ds_name = data_config.ds4_name
+ds_name = data_config.df4_name
 
 #Save the stock data to a csv
 def call_stock(query, time_window, max_results, ds_name = ds_name, save_path = save_path):

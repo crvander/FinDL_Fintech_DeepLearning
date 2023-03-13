@@ -22,4 +22,4 @@ test_name: "test.csv" # file name for testing data
 
 query: "AAPL"
 time_window: 30
-max_results: 100
+max_results: 50
