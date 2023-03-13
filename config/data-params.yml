@@ -21,5 +21,5 @@ train_name: "train.csv" # file name for training data
 test_name: "test.csv" # file name for testing data 
 
 query: "AAPL"
-time_window: 7
+time_window: 6
 max_results: 50
