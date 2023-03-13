@@ -4,8 +4,7 @@ from box import Box
 import pandas as pd
 import time
 sys.path.insert(0, 'src')
-from data.make_dataset import download_data, generate_data, save_data
-from twitter.pull_tweets import call_stock
+from data.make_dataset import download_data, generate_data, save_data, generate_tweet
 from utils.download_models import download_models
 from models.train import train
 from models.test import test, prediction
@@ -61,7 +60,7 @@ def main(args):
         
     if 'predict' in args:
         logging.info('fetching and processing twitter data...')
-        call_stock()
+        generate_tweet()
         logging.info('prediction on tweets start...')
         prediction()
     return
