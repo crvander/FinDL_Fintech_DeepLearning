@@ -25,13 +25,11 @@ expand = data_config.expand
 ds1 = data_config.ds1_name
 ds2 = data_config.ds2_name
 ds3 = data_config.ds3_name
-ds4 = data_config.ds4_name
 
 # datasets path from source
 ds1_path = data_config.ds1_path
 ds2_path = data_config.ds2_path
 ds3_path = data_config.ds3_path
-ds4_path = data_config.ds4_path
 
 # file name for reading the files in saved dataset
 df1_name = data_config.df1_name
@@ -114,5 +112,5 @@ def generate_tweet(query = query, time_window = time_window, max_results = max_r
     df4 = df4.drop(["query"], axis = 1)
     df4['timestamp'] = df4['timestamp'].str[:10]
     logging.info('saving proccesed tweets data...')
-    df4.to_csv(save_path + df4_name, index=False)
+    df4.to_csv(save_path + df4_name, index=False) # save in data/temp
     
