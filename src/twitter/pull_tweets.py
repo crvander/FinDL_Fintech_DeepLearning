@@ -17,10 +17,10 @@ with open('config/data-params.yml', 'r') as file:
     data_config = Box(yaml.full_load(file))
     
 save_path = data_config.save_path_raw
-df_name = data_config.df4_name
+ds_name = data_config.ds4_name
 
 #Save the stock data to a csv
-def call_stock(query, time_window, max_results, df_name = df_name, save_path = save_path):
+def call_stock(query, time_window, max_results, ds_name = ds_name, save_path = save_path):
     today = datetime.utcnow().date()
     start_date = today - timedelta(days=time_window)
     end_date = today - timedelta(days=1)
@@ -40,4 +40,4 @@ def call_stock(query, time_window, max_results, df_name = df_name, save_path = s
             tweet_text = tweet.text
             timestamp = tweet.created_at
             df = df.append({'tweet': tweet_text, 'query': query, 'timestamp': timestamp}, ignore_index=True)
-    df.to_csv(save_path + '/' + df_name, index=False)
+    df.to_csv(save_path + '/' + ds_name, index=False)
