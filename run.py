@@ -54,14 +54,16 @@ def main(args):
     if 'test' in args: # test on test dataset
         logging.info('test run start...')
         test(test_target = 'test', test_lines = 3)
-    else: # test run for submission
+    elif 'test_run': # test run for submission
         logging.info('testing start...')
         test(test_target = 'testing', test_lines = 20)
-    return
-    
+        
     if 'predict' in args:
         logging.info('prediction on tweets start...')
         prediction()
+    return
+    
+    
         
 
 if __name__ == '__main__':
