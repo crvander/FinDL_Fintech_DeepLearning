@@ -108,7 +108,7 @@ def generate_tweet(query = query, time_window = time_window, max_results = max_r
     logging.info('calling tweets api...')
     call_stock(query, time_window, max_results)
     logging.info('reading tweets raw data and process...')
-    df4 = pd.read_csv('{}/{}'.format(save_path_raw, df4_name)) # read tweets raw data
+    df4 = pd.read_csv('{}/{}'.format(save_path_raw, ds4_name)) # read tweets raw data
     df4 = df4.drop(["query"], axis = 1)
     df4['timestamp'] = df4['timestamp'].str[:10]
     logging.info('saving proccesed tweets data...')
