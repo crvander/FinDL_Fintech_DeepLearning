@@ -62,7 +62,8 @@ def test(test_target = 'test', test_lines = 3):
                 
     logging.info('testing done')
     return
-    
+
+# prediction on the tweets
 def prediction():
  # run the prediction process on GPUs, if possible 
     if torch.cuda.is_available():
