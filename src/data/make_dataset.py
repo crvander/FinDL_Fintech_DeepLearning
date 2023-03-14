@@ -13,13 +13,13 @@ with open('config/data-params.yml', 'r') as file:
     data_config = Box(yaml.full_load(file))
     
 os.environ['KAGGLE_CONFIG_DIR'] = data_config.data_path # set folder path for kaggle credential
-random_state = data_config.random_state
-split = data_config.split
-save_path = data_config.save_path
-save_path_raw = data_config.save_path_raw
-train_name = data_config.train_name
-test_name = data_config.test_name
-expand = data_config.expand
+random_state = data_config.random_state # random state for train test split
+split = data_config.split # ratio of train test split
+save_path = data_config.save_path # save path for processed dataset
+save_path_raw = data_config.save_path_raw # save path for raw dataset
+train_name = data_config.train_name # file name for proccesed training dataset
+test_name = data_config.test_name # file name for proccesed training dataset
+expand = data_config.expand # whether to expand dataset from Spacy polarization
     
 # datasets name
 ds1 = data_config.ds1_name
@@ -35,11 +35,11 @@ ds3_path = data_config.ds3_path
 df1_name = data_config.df1_name
 df2_name = data_config.df2_name
 df3_name = data_config.df3_name
-df4_name = data_config.df4_name
+df4_name = data_config.df4_name # file for processed tweets dataset
 
-query = data_config.query
-time_window = data_config.time_window
-max_results = data_config.max_results
+query = data_config.query # stock code to be fetch
+time_window = data_config.time_window # days to be fetch
+max_results = data_config.max_results # max number of tweets to be fetch per day
 
 # function to pull online data from API
 def download_data():
@@ -84,7 +84,7 @@ def generate_data():
     df3['sentiment'] = df3['sentiment'].apply(convert_sentiment)
     df3.rename(columns={'Sentiment': 'sentiment', 'Text': 'text'}, inplace=True)
     if expand:                 
-        # df = pd.concat([df1, df2, df3, df4], ignore_index=True, axis=0) # to concat Spacy processed data, will be implemented in Quater 2
+        # df = pd.concat([df1, df2, df3, df4], ignore_index=True, axis=0) # to concat Spacy processed data
         df = pd.concat([df1, df2, df3], ignore_index=True, axis=0)
     else:
         df = pd.concat([df1, df2, df3], ignore_index=True, axis=0)
@@ -103,14 +103,15 @@ def save_data(df):
     test.to_csv(save_path + test_name, index=False) # save testing data
     logging.info('training and testing saved at {}') 
     return
-        
+
+# function to fetch, process and save tweets data
 def generate_tweet(query = query, time_window = time_window, max_results = max_results):
     logging.info('calling tweets api...')
-    call_stock(query, time_window, max_results)
+    call_stock(query, time_window, max_results) # fetch tweets and save raw tweets data
     logging.info('reading tweets raw data and process...')
     df4 = pd.read_csv('{}/{}'.format(save_path_raw, ds4_name)) # read tweets raw data
-    df4 = df4.drop(["query"], axis = 1)
-    df4['timestamp'] = df4['timestamp'].str[:10]
+    df4 = df4.drop(["query"], axis = 1) # drop stock code
+    df4['timestamp'] = df4['timestamp'].str[:10] # clean the date in yyyy-mm-dd
     logging.info('saving proccesed tweets data...')
     df4.to_csv(save_path + df4_name, index=False) # save in data/temp
     

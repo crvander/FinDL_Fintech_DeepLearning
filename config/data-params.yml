@@ -1,5 +1,5 @@
 data_path: "data" # data folder
-expand: True # whether to expand dataset from Spacy polarization, will be implemented in Quater 2
+expand: True # whether to expand dataset from Spacy polarization
 split: 0.2 # Train test split
 random_state: 42 # random_state of train test split
 ds1_name: "sentiment-analysis-for-financial-news.zip" # file name for first dataset
@@ -21,6 +21,6 @@ save_path_raw: "data/raw" # save path for raw datasets
 train_name: "train.csv" # file name for training data 
 test_name: "test.csv" # file name for testing data 
 
-query: "AAPL"
-time_window: 2 # max 6
-max_results: 10 # between 10 - 100
+query: "AAPL" # stock code to be fetch
+time_window: 6 # max 6 - days to be fetch
+max_results: 50 # between 10 - 100, max number of tweets to be fetch per day

@@ -11,18 +11,18 @@ import logging
 with open('config/train-params.yml', 'r') as file:
     train_config = Box(yaml.full_load(file))
     
-input_path = train_config.input_path
-output_dir = train_config.output_dir
-model_name = train_config.model_name
-tokenizer_name = train_config.tokenizer_name
-padding = train_config.padding
-evaluation_strategy = train_config.evaluation_strategy
-num_train_epochs = train_config.num_train_epochs
-log_level = train_config.log_level
-report_to = train_config.report_to
-per_device_train_batch_size = train_config.per_device_train_batch_size
-metric_name = train_config.metric_name
-save_strategy = train_config.save_strategy
+input_path = train_config.input_path # the input path for training
+output_dir = train_config.output_dir # the output path for training, all finetuned models will be saved
+model_name = train_config.model_name # the model name to be download from hugging face and saved after finetuned
+tokenizer_name = train_config.tokenizer_name # the tokenized name to be download and saved after finetuned
+padding = train_config.padding # max padding length
+evaluation_strategy = train_config.evaluation_strategy # evaluation every epoch
+num_train_epochs = train_config.num_train_epochs # number of training epochs
+log_level = train_config.log_level  # log level
+report_to = train_config.report_to # report to
+per_device_train_batch_size = train_config.per_device_train_batch_size # training batch size
+metric_name = train_config.metric_name # name for the evaluation metric
+save_strategy = train_config.save_strategy # saving stragtegy for model checkpoints
 
 # function to train models 
 def train():
@@ -67,10 +67,12 @@ def train():
     }
     # load evaluation metric
     metric = evaluate.load(metric_name)
+    
     def compute_metrics(eval_pred):
         logits, labels = eval_pred
         predictions = np.argmax(logits ,axis = -1)
         return metric.compute(predictions = predictions, references = labels)
+        
     training_args = TrainingArguments(**args)
     # train the model with the appropriate arguments
     trainer = Trainer(model = model,
