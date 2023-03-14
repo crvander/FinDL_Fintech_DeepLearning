@@ -22,11 +22,14 @@ python run.py generate_data download_models test
 # trainning process based on pretrained models from HuggingFace
 python run.py generate_data train test
 
-# for default testing run (submission for Quater1), no argument needed
+# for predict based on tweets data from twitter API
+python run.py download_models predict
+
+# for default testing run (submission for Quater1), 
 # test run will download, unzip our finetuned models from google drive,
 # predict on dummy testdata(3 samples) and output predicted labels
 
-python run.py
+python run.py testing
 ```
 
 ### File structure and configuration

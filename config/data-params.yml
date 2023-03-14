@@ -1,17 +1,26 @@
 data_path: "data" # data folder
-expand: True # whether to expand dataset from Spacy polarization, will be implemented in Quater 2
+expand: True # whether to expand dataset from Spacy polarization
 split: 0.2 # Train test split
 random_state: 42 # random_state of train test split
 ds1_name: "sentiment-analysis-for-financial-news.zip" # file name for first dataset
 ds2_name: "stockmarket-sentiment-dataset.zip" # file name for second dataset
 ds3_name: "stock-markettweets-lexicon-data.zip" # file name for third dataset
+ds4_name: "tweets.csv"
+
 ds1_path: "ankurzing/sentiment-analysis-for-financial-news" # read path for first dataset source
 ds2_path: "yash612/stockmarket-sentiment-dataset" # read path for second dataset source
 ds3_path: "utkarshxy/stock-markettweets-lexicon-data" # read path for third dataset source
+
 df1_name: "all-data.csv" # save name for first dataset
 df2_name: "stock_data.csv" # save name for second dataset
 df3_name: "tweets_labelled_09042020_16072020.csv" # save name for third dataset
-save_path: "data/temp" # save path for all processed data
+df4_name: "tweets_processed.csv" # Dylan's tweet raw data
+
+save_path: "data/temp/" # save path for all processed data
 save_path_raw: "data/raw" # save path for raw datasets
 train_name: "train.csv" # file name for training data 
 test_name: "test.csv" # file name for testing data 
+
+query: "AAPL" # stock code to be fetch
+time_window: 6 # max 6 - days to be fetch
+max_results: 50 # between 10 - 100, max number of tweets to be fetch per day

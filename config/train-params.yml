@@ -1,5 +1,5 @@
 input_path: 'data/temp' # the input path for training
-output_dir: 'results' # the output path for training, all finetuned models will be saved
+output_dir: 'results/temp' # the output path for training, all finetuned models will be saved
 #model_name: 'bert-base-cased' # the model name to be download from hugging face and saved after finetuned
 #tokenizer_name: 'bert-base-cased' # the tokenized name to be download and saved after finetuned
 model_name: 'ProsusAI/finbert'

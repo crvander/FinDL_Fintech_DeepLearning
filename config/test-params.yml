@@ -3,5 +3,7 @@ model_path: 'results' # folder path for all saved finetuned models
 model_name: 'finbert'
 test_path: 'data/temp/test.csv' # the path for input test target 
 testdata_path: 'test/testdata/test.csv' # the path for input testrun dummy target, for submission
+target_path: 'data/temp/tweets_processed.csv'
+
 output_dir: 'data/out' # save path for prediction output
 preds_name: 'preds.csv' # file name for prediction output
