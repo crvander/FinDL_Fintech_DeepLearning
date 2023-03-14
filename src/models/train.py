@@ -26,6 +26,19 @@ save_strategy = train_config.save_strategy # saving stragtegy for model checkpoi
 
 # function to train models 
 def train():
+    """
+    Function to train models. This function will try to perform the training on GPUs if possible.
+    This is a generic function to train user preferred models. Users can choose what models and 
+    hyperparameters they prefer when training. Users can make changes to the configuration files
+    to update their preferences.
+
+    The function will also save the trained model to user preferred destinations. Default destination
+    is results/model_name.
+
+    Return str, the name of the model.
+
+    No arguments required for this function.
+    """
     logging.info('initiate training...')
     #torch.cuda.empty_cache()
 

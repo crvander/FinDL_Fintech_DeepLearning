@@ -41,17 +41,16 @@ query = data_config.query # stock code to be fetch
 time_window = data_config.time_window # days to be fetch
 max_results = data_config.max_results # max number of tweets to be fetch per day
 
-```
-Function to pull online data from API
-Return None.
-
-`"kwargs"`: dict
-        Keyword arguments for the constructor of the cell class.
-        A cell is created by :python:`cell_class(**kwargs)`, where
-        `cell_class` is specified in "type" above.
-        Ignored if "type" is a cell instance.
-```
 def download_data():
+    """
+    Function to gather training dataset from different sources. This function will download
+    datasets from Kaggle API and save them to the data/raw folder. If the dataset already exists,
+    ignore and continue to next dataset.
+
+    Return None.
+
+    No additional arguments required for this function.
+    """
     dir = os.listdir(save_path_raw)
     logging.info('downloading datasets....')
     # commands to download dataset from Kaggle
@@ -68,6 +67,19 @@ def download_data():
 
 # function to generate training, validation, testing data
 def generate_data():
+    """
+    Function to preprocess raw data downloaded by download_data(). The function will return
+    a preprocessed dataset ready for model training.
+
+    Preprocess:
+        1. convert categorical sentiment representations to numerical values.
+        2. sync feature names for each datasets in order to join them in the future.
+        3. join all preprocessed datasets and perform renaming as necessary. 
+
+    Return pd.dataframe
+
+    No additional arguments required for this function.
+    """
     logging.info('loading datasets from {}....'.format(save_path_raw))
     df1 = pd.read_csv('{}/{}'.format(save_path_raw, df1_name), delimiter=',', encoding='latin-1',
                       names=['sentiment', 'text']) # read first data
@@ -104,6 +116,21 @@ def generate_data():
 
 # function to save the processed dataset
 def save_data(df):
+    """
+    Function to split and save the preprocessed dataset to appropriate destinations.
+
+    Split:
+        split the preprocessed data into training and testing portions based on customized
+        training size.
+    Save:
+        The training and testing dataset will be saved at user desired destination.
+        Default destination is data/temp.
+
+    Return None.
+
+    Parameters:
+        df: pd.dataframe, dataset that is in need of splitting and saving.
+    """
     logging.info('train test with {} split, random state {}'.format(split, str(random_state)))
     # split the dataset into training and testing sets.
     train, test = train_test_split(df, test_size=split, random_state = random_state)
@@ -115,6 +142,26 @@ def save_data(df):
 
 # function to fetch, process and save tweets data
 def generate_tweet(query = query, time_window = time_window, max_results = max_results):
+    """
+    Function to fetch, process and save data from Twitter API. 
+
+    Fetch:
+        This function will fetch data from the Twitter API in a user preferred time interval.
+        It also allows users to choose how many tweets they want and what companies they want 
+        the tweets to be about.
+    Process:
+        Perform preprocessing for the retrieved tweets including filtering and renaming. Tweets
+        will then be ready for model training.
+    Save:
+        Save the dataset at user desired destinations. Default destination is data/temp.
+
+    Return None
+
+    Parameters:
+        query: str, NASDAQ codes for companies that users need to search for.
+        time_window: int, defines how large is the time interval in terms of days.
+        max_results: int, defines how many tweets are generated.
+    """
     logging.info('calling tweets api...')
     call_stock(query, time_window, max_results) # fetch tweets and save raw tweets data
     logging.info('reading tweets raw data and process...')

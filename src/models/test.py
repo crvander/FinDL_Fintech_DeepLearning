@@ -21,6 +21,18 @@ with open('config/test-params.yml', 'r') as file:
 
 # function to test the model on test data
 def test(test_target = 'test', test_lines = 3):
+    """
+    Function to test the trained model on testing data. This function will try to perform the 
+    testing on GPUs if possible. The function will fetch the finetuned model from results/model_name,
+    then fetch the testing data and perform predictions. The predictions will be save at user
+    preferred destinations. Default destination is data/out. 
+
+    Return None.
+
+    Parameters:
+        test_target: str, this argument defines what testing data to use. Default 'test'.
+        test_lines: int, this argument defines how many predictions to make. Default 3.
+    """
 
  # run the testing process on GPUs, if possible 
     if torch.cuda.is_available():
@@ -65,6 +77,17 @@ def test(test_target = 'test', test_lines = 3):
 
 # prediction on the tweets
 def prediction():
+    """
+    Function to make predictions on real-time tweets. This function will try to perform the 
+    testing on GPUs if possible. This function will fetch finetuned models from 
+    results/model_name. The function will make predictions for each day on tweets generated from
+    Twitter API for a specific company, then average the sentiments and save the results in a 
+    user defined destination. Default destination is data/out.
+
+    Return None.
+
+    No arguments required for this function.
+    """
  # run the prediction process on GPUs, if possible 
     if torch.cuda.is_available():
         device = torch.device('cuda')

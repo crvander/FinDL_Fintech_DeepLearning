@@ -11,6 +11,15 @@ from models.test import test, prediction
 import logging
 
 def main(args):
+    """
+    Function to run the whole project. This function allows arguments for different 
+    purposes. The function will make a run from top to bottom. 
+
+    Return None.
+
+    Parameters:
+        args: **args, arguments to define the purpose of the run.
+    """
     logging.basicConfig(filename='myapp.log', level=logging.INFO)
     logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
     logging.info(args)

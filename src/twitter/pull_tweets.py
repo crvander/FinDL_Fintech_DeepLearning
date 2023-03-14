@@ -26,6 +26,21 @@ ds_name = data_config.ds4_name # the file name for raw tweets data
 
 #Save the stock data to a csv
 def call_stock(query, time_window, max_results, ds_name = ds_name, save_path = save_path):
+    """
+    Function to retrieve and save tweets from Twitter API. This function will call from 
+    pytwitter to retrieve specific tweets from Twitter and then save them to a user defined
+    destination. Default destination is data/raw. This function allows users to define the 
+    companies, time interval and number of tweets they want to search for.
+
+    Return None.
+
+    Parameters:
+        query: str, NASDAQ code for companies.
+        time_window: int, the length of the time interval in terms of days.
+        max_results: int, the number of tweets to retrieve.
+        ds_name: str, the name of the dataset generated
+        save_path: str, the destination to save the generated dataset.
+    """
     today = datetime.utcnow().date() # today's date
     start_date = today - timedelta(days=time_window) # the earlist date for tweets
     end_date = today - timedelta(days=1) # the last date for tweets
