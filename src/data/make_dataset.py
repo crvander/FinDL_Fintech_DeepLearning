@@ -41,7 +41,16 @@ query = data_config.query # stock code to be fetch
 time_window = data_config.time_window # days to be fetch
 max_results = data_config.max_results # max number of tweets to be fetch per day
 
-# function to pull online data from API
+```
+Function to pull online data from API
+Return None.
+
+`"kwargs"`: dict
+        Keyword arguments for the constructor of the cell class.
+        A cell is created by :python:`cell_class(**kwargs)`, where
+        `cell_class` is specified in "type" above.
+        Ignored if "type" is a cell instance.
+```
 def download_data():
     dir = os.listdir(save_path_raw)
     logging.info('downloading datasets....')

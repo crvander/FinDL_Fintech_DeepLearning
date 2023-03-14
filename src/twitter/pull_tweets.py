@@ -21,14 +21,14 @@ api = Api(
 with open('config/data-params.yml', 'r') as file:
     data_config = Box(yaml.full_load(file))
     
-save_path = data_config.save_path_raw
-ds_name = data_config.ds4_name
+save_path = data_config.save_path_raw # the save path for raw tweets data
+ds_name = data_config.ds4_name # the file name for raw tweets data
 
 #Save the stock data to a csv
 def call_stock(query, time_window, max_results, ds_name = ds_name, save_path = save_path):
-    today = datetime.utcnow().date()
-    start_date = today - timedelta(days=time_window)
-    end_date = today - timedelta(days=1)
+    today = datetime.utcnow().date() # today's date
+    start_date = today - timedelta(days=time_window) # the earlist date for tweets
+    end_date = today - timedelta(days=1) # the last date for tweets
 
     columns = ['tweet', 'query', 'timestamp']
     df = pd.DataFrame(columns=columns)

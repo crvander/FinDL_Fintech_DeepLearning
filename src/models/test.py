@@ -84,23 +84,23 @@ def prediction():
     pipeline = TextClassificationPipeline(model=model, tokenizer=tokenizer, top_k=1) # return_all_scores will return dict within list 
     
     logging.info('loading target data from {} ...'.format(input_path))
-    df = pd.read_csv(input_path)
+    df = pd.read_csv(input_path) # read the processed tweets dataset
     logging.info('grouping text by day...'.format(input_path))
-    dictionary = df.groupby('timestamp')['tweet'].apply(list).to_dict()
+    dictionary = df.groupby('timestamp')['tweet'].apply(list).to_dict() # group text by day and save in list for each day
     logging.info('predicting on each day...')
     # target data prediction
-    for day in dictionary:
+    for day in dictionary: # for each day in dictionary of lists
         logging.info('predicting on {}...'.format(day))
-        sum_sentiment = 0
-        prediction = pipeline(dictionary[day])
-        for item in prediction:
+        sum_sentiment = 0 # sum sentiment for each day
+        prediction = pipeline(dictionary[day]) # pridict sentiment for each tweet
+        for item in prediction: # for each tweet, if positive sum sentiment + 1, if negative then -1, neutral do nothing
             if item[0]['label'] == 'positive':
-                sum_sentiment += 1
+                sum_sentiment += 1 
             elif item[0]['label'] == 'negative':
                 sum_sentiment -= 1
-        avg_daily_prediction = sum_sentiment/len(prediction)
+        avg_daily_prediction = sum_sentiment/len(prediction) # average sentiment for each day
         logging.info('save average sentiment {} on {}...'.format(avg_daily_prediction, day))
-        out.append({"label": avg_daily_prediction, "date" : day})   
+        out.append({"label": avg_daily_prediction, "date" : day}) # save average sentiment per day into list of dictionaries
     
     print(out)
     logging.info('saving daily average sentiment to {} ...'.format(output_dir))
