@@ -1,6 +1,9 @@
 # 8. Documentation
 
+### data/make_dataset.py
+
 download_data():
+
     Function to gather training dataset from different sources. This function will download
     datasets from Kaggle API and save them to the data/raw folder. If the dataset already exists,
     ignore and continue to the next dataset.
@@ -10,7 +13,7 @@ download_data():
     No additional arguments required for this function.
 
 save_data(df):
-    """
+    
     Function to split and save the preprocessed dataset to appropriate destinations.
 
     Split:
@@ -25,10 +28,9 @@ save_data(df):
 
     Parameters:
         - df: pd.dataframe, dataset that is in need of splitting and saving.
-    """
 
 generate_data():
-    """
+   
     Function to preprocess raw data downloaded by download_data(). The function will return
     a preprocessed dataset ready for model training.
 
@@ -40,10 +42,10 @@ generate_data():
     Return pd.dataframe
 
     No additional arguments required for this function.
-    """
+   
 
 generate_tweet(query=query, time_window=time_window, max_results=max_results):
-    """
+    
     Function to fetch, process and save data from Twitter API.
 
     Fetch:
@@ -64,4 +66,24 @@ generate_tweet(query=query, time_window=time_window, max_results=max_results):
         - query: str, NASDAQ codes for companies that users need to search for.
         - time_window: int, defines how large the time interval is in terms of days.
         - max_results: int, defines how many tweets are generated.
-    """
+        
+
+### models/train.py
+
+train():
+
+   Function to test the trained model on testing data. This function will try to perform the
+   testing on GPUs if possible. The function will fetch the finetuned model from results/model_name,
+   then fetch the testing data and perform predictions. The predictions will be save at user
+   preferred destinations. Default destination is data/out.
+
+
+   Return None.
+
+
+   Parameters:
+       test_target: str, this argument defines what testing data to use. Default 'test'.
+       test_lines: int, this argument defines how many predictions to make. Default 3.
+
+
+
