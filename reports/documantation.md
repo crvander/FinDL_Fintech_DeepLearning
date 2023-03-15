@@ -2,7 +2,7 @@
 
 data/make_dataset.py
 
-download_data():
+## `download_data()`:
 
     Function to gather training dataset from different sources. This function will download
     datasets from Kaggle API and save them to the data/raw folder. If the dataset already exists,
@@ -15,7 +15,7 @@ download_data():
 
 data/make_dataset.py
 
-save_data(df):
+## `save_data(df)`:
     
     Function to split and save the preprocessed dataset to appropriate destinations.
 
@@ -35,7 +35,7 @@ save_data(df):
 
 data/make_dataset.py
 
-generate_data():
+## `generate_data()`:
    
     Function to preprocess raw data downloaded by download_data(). The function will return
     a preprocessed dataset ready for model training.
@@ -51,7 +51,7 @@ generate_data():
    
 data/make_dataset.py  
 
-generate_tweet(query=query, time_window=time_window, max_results=max_results):
+## `generate_tweet(query=query, time_window=time_window, max_results=max_results)`:
     
     Function to fetch, process and save data from Twitter API.
 
