@@ -1,7 +1,6 @@
 # 8. Documentation
 
 download_data():
-    """
     Function to gather training dataset from different sources. This function will download
     datasets from Kaggle API and save them to the data/raw folder. If the dataset already exists,
     ignore and continue to the next dataset.
@@ -9,7 +8,6 @@ download_data():
     Return None.
 
     No additional arguments required for this function.
-    """
 
 save_data(df):
     """
