@@ -81,9 +81,9 @@ models/test.py
 - `test_lines`: int, this argument defines how many predictions to make. Default `3`.
 
 
-models/test.py:
+## models/test.py:
 
-## `prediction()`
+### `prediction()`
 
 [`prediction()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/models/test.py#L79) is a function to make predictions on real-time tweets. This function will try to perform the testing on GPUs if possible. This function will fetch finetuned models from `results/model_name`. The function will make predictions for each day on tweets generated from Twitter API for a specific company, then average the sentiments and save the results in a user-defined destination. Default destination is `data/out`.
 
@@ -94,7 +94,7 @@ models/test.py:
 
 twitter/pull_tweets.py
 
-## `call_stock(query, time_window, max_results, ds_name = ds_name, save_path = save_path)`
+### `call_stock(query, time_window, max_results, ds_name = ds_name, save_path = save_path)`
 
 [`call_stock()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/twitter/pull_tweets.py#L28) is a function to retrieve and save tweets from Twitter API. This function will call from pytwitter to retrieve specific tweets from Twitter and then save them to a user-defined destination. Default destination is `data/raw`. This function allows users to define the companies, time interval, and number of tweets they want to search for.
 
