@@ -72,7 +72,7 @@ models/test.py
 
 ## `test()`
 
-[`test()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/models/test.py#L23) is a function to test the trained model on testing data. This function will try to perform the testing on GPUs if possible. The function will fetch the finetuned model from `results/model_name`, then fetch the testing data and perform predictions. The predictions will be saved at user preferred destinations. Default destination is `data/out`.
+    [`test()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/models/test.py#L23) is a function to test the trained model on testing data. This function will try to perform the testing on GPUs if possible. The function will fetch the finetuned model from `results/model_name`, then fetch the testing data and perform predictions. The predictions will be saved at user preferred destinations. Default destination is `data/out`.
 
 **Return:** None.
 
