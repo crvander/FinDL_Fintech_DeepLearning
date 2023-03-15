@@ -18,11 +18,11 @@ data/make_dataset.py
 `save_data(df)` is a function to split and save the preprocessed dataset to appropriate destinations.
 
 Split:
-    - split the preprocessed data into training and testing portions based on customized training size.
+- split the preprocessed data into training and testing portions based on customized training size.
 
 Save:
-    - The training and testing dataset will be saved at user desired destination.
-    - Default destination is data/temp.
+- The training and testing dataset will be saved at user desired destination.
+- Default destination is data/temp.
 
 **Return:** None
 
