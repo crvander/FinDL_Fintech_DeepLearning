@@ -16,4 +16,5 @@ chapters:
 - file: discussion
 - file: conclusion
 - file: references
-- file: demo
+- file: documentation
+- file: dashboard

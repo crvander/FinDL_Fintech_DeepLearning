@@ -43,8 +43,7 @@ Finetuned models, no matter directly output from training process, or download f
 or default as test to predict on testrun dummy data. All prediction will be saved in data/out.
 
 ```
-DSC180a-Q1-NLP                                                     //
-├─ .git                                                            //
+FinTech Project                      //
 ├─ config                            //
 │  ├─ config.json                    //
 │  ├─ data-params.yml                //
