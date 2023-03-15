@@ -4,33 +4,30 @@ data/make_dataset.py
 
 ## `download_data()`:
 
-    Function to gather training dataset from different sources. This function will download
-    datasets from Kaggle API and save them to the data/raw folder. If the dataset already exists,
-    ignore and continue to the next dataset.
+[`download_data()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/data/make_dataset.py#L44) is a function to gather training dataset from different sources. This function will download datasets from Kaggle API and save them to the data/raw folder. If the dataset already exists, ignore and continue to the next dataset.
 
-    Return None.
+**Return:** None
 
-    No additional arguments required for this function.
+**No additional arguments required for this function.**
 
 
 data/make_dataset.py
 
 ## `save_data(df)`:
     
-    Function to split and save the preprocessed dataset to appropriate destinations.
+`save_data(df)` is a function to split and save the preprocessed dataset to appropriate destinations.
 
-    Split:
-        - split the preprocessed data into training and testing portions based on customized
-          training size.
+Split:
+    - split the preprocessed data into training and testing portions based on customized training size.
 
-    Save:
-        - The training and testing dataset will be saved at user desired destination.
-        - Default destination is data/temp.
+Save:
+    - The training and testing dataset will be saved at user desired destination.
+    - Default destination is data/temp.
 
-    Return None.
+**Return:** None
 
-    Parameters:
-        - df: pd.dataframe, dataset that is in need of splitting and saving.
+**Parameters**:
+-`df`: pd.dataframe, dataset that is in need of splitting and saving.
 
 
 data/make_dataset.py
@@ -86,8 +83,7 @@ The function will also save the trained model to user preferred destinations. De
 
 **Return:** str, the name of the model.
 
-
-No arguments required for this function.
+**No arguments required for this function.**
 
 
 models/test.py
