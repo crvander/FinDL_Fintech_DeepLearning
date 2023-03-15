@@ -27,7 +27,7 @@ Save:
 **Return:** None
 
 **Parameters**:
--`df`: pd.dataframe, dataset that is in need of splitting and saving.
+- `df`: pd.dataframe, dataset that is in need of splitting and saving.
 
 
 data/make_dataset.py
