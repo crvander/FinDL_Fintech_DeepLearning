@@ -15,7 +15,7 @@ data/make_dataset.py
 
 ## `save_data(df)`:
     
-`save_data(df)` is a function to split and save the preprocessed dataset to appropriate destinations.
+[`save_data(df)`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/data/make_dataset.py#L118) is a function to split and save the preprocessed dataset to appropriate destinations.
 
 Split:
 - split the preprocessed data into training and testing portions based on customized training size.
@@ -34,42 +34,40 @@ data/make_dataset.py
 
 ## `generate_data()`:
    
-    Function to preprocess raw data downloaded by download_data(). The function will return
+[`generate_data()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/data/make_dataset.py#L69) is a function to preprocess raw data downloaded by download_data(). The function will return
     a preprocessed dataset ready for model training.
 
-    Preprocess:
-        1. convert categorical sentiment representations to numerical values.
-        2. sync feature names for each dataset in order to join them in the future.
-        3. join all preprocessed datasets and perform renaming as necessary.
+Preprocess:
+- convert categorical sentiment representations to numerical values.
+- sync feature names for each dataset in order to join them in the future.
+- join all preprocessed datasets and perform renaming as necessary.
 
-    Return pd.dataframe
+**Return:** pd.dataframe
 
-    No additional arguments required for this function.
+**No additional arguments required for this function.**
    
 data/make_dataset.py  
 
 ## `generate_tweet(query=query, time_window=time_window, max_results=max_results)`:
     
-    Function to fetch, process and save data from Twitter API.
+`generate_tweet()` is a function to fetch, process and save data from Twitter API.
 
-    Fetch:
-        - This function will fetch data from the Twitter API in a user-preferred time interval.
-        - It also allows users to choose how many tweets they want and what companies they want
-          the tweets to be about.
+Fetch:
+- This function will fetch data from the Twitter API in a user-preferred time interval.
+- It also allows users to choose how many tweets they want and what companies they want the tweets to be about.
 
-    Process:
-        - Perform preprocessing for the retrieved tweets including filtering and renaming. Tweets
-          will then be ready for model training.
+Process:
+- Perform preprocessing for the retrieved tweets including filtering and renaming. Tweets will then be ready for model training.
 
-    Save:
-        - Save the dataset at user desired destinations. Default destination is data/temp.
+Save:
+- Save the dataset at user desired destinations. Default destination is data/temp.
 
-    Return None
+**Return None**
 
-    Parameters:
-        - query: str, NASDAQ codes for companies that users need to search for.
-        - time_window: int, defines how large the time interval is in terms of days.
-        - max_results: int, defines how many tweets are generated.
+Parameters:
+- `query`: str, NASDAQ codes for companies that users need to search for.
+- `time_window`: int, defines how large the time interval is in terms of days.
+- `max_results`: int, defines how many tweets are generated.
         
 
 models/train.py
