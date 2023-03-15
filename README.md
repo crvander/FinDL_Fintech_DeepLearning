@@ -12,7 +12,7 @@ The FinTech package is a set of utilities designed to assist users in the financ
 Go to the dashboard and select a stock to see the data.
 
 ## Example
-![Example of Dashboard](example_output.png)
+![Example of Dashboard](8(1).png)
 
 ## Future Plans
 Our future plan consists of further training and fine-tuning the models to achieve even higher performance. We also plan to expand the package's functionality by adding more financial domain language models and incorporating more advanced sentiment analysis techniques.
