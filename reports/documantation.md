@@ -68,22 +68,41 @@ generate_tweet(query=query, time_window=time_window, max_results=max_results):
         - max_results: int, defines how many tweets are generated.
         
 
-### models/train.py
+models/test.py
 
-train():
+## `test()`
 
-   Function to test the trained model on testing data. This function will try to perform the
-   testing on GPUs if possible. The function will fetch the finetuned model from results/model_name,
-   then fetch the testing data and perform predictions. The predictions will be save at user
-   preferred destinations. Default destination is data/out.
+[`test()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/models/test.py#L23) is a function to test the trained model on testing data. This function will try to perform the testing on GPUs if possible. The function will fetch the finetuned model from `results/model_name`, then fetch the testing data and perform predictions. The predictions will be saved at user preferred destinations. Default destination is `data/out`.
 
+**Return:** None.
 
-   Return None.
-
-
-   Parameters:
-       test_target: str, this argument defines what testing data to use. Default 'test'.
-       test_lines: int, this argument defines how many predictions to make. Default 3.
+**Parameters:**
+- `test_target`: str, this argument defines what testing data to use. Default `'test'`.
+- `test_lines`: int, this argument defines how many predictions to make. Default `3`.
 
 
+models/test.py:
 
+## `prediction()`
+
+[`prediction()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/models/test.py#L79) is a function to make predictions on real-time tweets. This function will try to perform the testing on GPUs if possible. This function will fetch finetuned models from `results/model_name`. The function will make predictions for each day on tweets generated from Twitter API for a specific company, then average the sentiments and save the results in a user-defined destination. Default destination is `data/out`.
+
+**Return:** None.
+
+**No arguments required for this function.**
+
+
+twitter/pull_tweets.py
+
+## `call_stock(query, time_window, max_results, ds_name = ds_name, save_path = save_path)`
+
+[`call_stock()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/twitter/pull_tweets.py#L28) is a function to retrieve and save tweets from Twitter API. This function will call from pytwitter to retrieve specific tweets from Twitter and then save them to a user-defined destination. Default destination is `data/raw`. This function allows users to define the companies, time interval, and number of tweets they want to search for.
+
+**Return:** None.
+
+**Parameters:**
+- `query`: str, NASDAQ code for companies.
+- `time_window`: int, the length of the time interval in terms of days.
+- `max_results`: int, the number of tweets to retrieve.
+- `ds_name`: str, the name of the dataset generated.
+- `save_path`: str, the destination to save the generated dataset.
