@@ -8,6 +8,8 @@ To visualize our library in production, go to <http://findl.crvander.com>
 
 ![](figures/3a.png "FinDL - dashboard")
 
+![](figures/3b.png "FinDL - dashboard")
+
 ![](figures/4a.png "FinDL - dashboard")
 
 ![](figures/5a.png "FinDL - dashboard")
