@@ -75,6 +75,21 @@ data/make_dataset.py
         - max_results: int, defines how many tweets are generated.
         
 
+models/train.py
+
+## `train()`:
+
+[`train()`](https://github.com/crvander/capstoneproj2023/blob/14b75f083c2bc08f166ec30d2a941047951afcaf/src/models/train.py#L28) is a function to train models. This function will try to perform the training on GPUs if possible.
+This is a generic function to train user preferred models. Users can choose what models and hyperparameters they prefer when training. Users can make changes to the configuration files to update their preferences.
+
+The function will also save the trained model to user preferred destinations. Default destination is results/model_name.
+
+**Return:** str, the name of the model.
+
+
+No arguments required for this function.
+
+
 models/test.py
 
 ## `test()`
