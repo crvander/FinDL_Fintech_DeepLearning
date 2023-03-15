@@ -7,7 +7,7 @@ format: jb-book
 root: abstract
 parts:
   - caption: Data Science Capstone 2023
-    numbered: false  # Only applies to chapters in Part 1.
+    numbered: true  # Only applies to chapters in Part 1.
     chapters:
     # - file: markdown
     # - file: notebooks
