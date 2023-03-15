@@ -1,4 +1,4 @@
-# 5. Discussion
+# Discussion
 
 Many works attempt to capture the price movement of the financial instruments. This project and the following package can be used for finance companies deploying models for automatic document classification. In this case, they will need approaches that can scale well and are simple to deploy, but have no need to train or fine-tune the model. By using the package we provide, they are able to search the model and use a pretrained and fine-tuned classification model designed for accurate, fast inference. If needed, continuing training on user customized data is possible. They were able to run and deploy the model directly from our package with no required research or ML expertise.
 Risk is also an important attribute of financial instruments. For the purpose of detecting risk, we

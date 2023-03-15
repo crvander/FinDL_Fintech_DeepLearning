@@ -5,16 +5,19 @@ title: New Title
 format: jb-book 
 # root: 
 root: abstract
-chapters:
-# - file: markdown
-# - file: notebooks
-# - file: markdown-notebooks 
-# - file: abstract
-- file: introduction
-- file: methods
-- file: results
-- file: discussion
-- file: conclusion
-- file: documentation
-- file: references
-- file: dashboard
+parts:
+  - caption: Data Science Capstone 2023
+    numbered: false  # Only applies to chapters in Part 1.
+    chapters:
+    # - file: markdown
+    # - file: notebooks
+    # - file: markdown-notebooks 
+    # - file: abstract
+    - file: introduction
+    - file: methods
+    - file: results
+    - file: discussion
+    - file: conclusion
+    - file: documentation
+    - file: references
+    - file: dashboard

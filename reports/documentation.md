@@ -1,4 +1,4 @@
-# 8. Documentation
+# Documentation
 
 **download_data():**
 

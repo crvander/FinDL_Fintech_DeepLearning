@@ -1,4 +1,4 @@
-# 2. Introduction
+# Introduction
 
 In recent years, deep learning has revolutionized the development of intelligent systems in many fields especially in Natural Language Processing (NLP) using state-of-the-art architectures that significantly improved many NLP tasks. With the recent progress made in NLP, researchers are starting to pay more attention to tackling numerous tasks in finance. As the amount of textual content generated in the financial domain is growing at an exponential rate, natural language processing is becoming a strategic tool for financial analysis. For example, financial practitioners are often required to use a set of NLP techniques, such as financial text classification and sentimental analysis for risk assessment, stock investment, and market trend detection.
 Some of the researchers construct an end-to-end model for making the prediction. Sentiment analysis approaches are more common in this field, thus providing insights on financial decision-making. Such models include VAE, Capsule network, hybrid attention network, BERT, XLNet, etc.

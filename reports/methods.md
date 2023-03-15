@@ -1,6 +1,6 @@
-# 3. Methods
+# Methods
 
-### 3.1 Dataset
+### Dataset
 
 The dataset utilized during the sentiment classification procedure is important to the research since it has a substantial impact on classification performance. Given the purpose stated, the dataset must be text with short length relevant to the stock market, as the objective is sentiment analysis of stock market or company analysis. The main sentiment analysis dataset used in this project consists of three parts: Financial PhraseBank, IEEE DataPort and Kaggle tweets dataset. All three datasets are financial related and manually labeled with sentiment scores. In total, the dataset collected for this project has 11,936 financial related text, each with a custom labeled sentiment score in 0 (neutral), 1 (positive) or -1 (negative). Due to the lack of training text in the financial field and the scarcity of manually labeled ones, the collected dataset may be insufficient to train a model with better performance. The raw data should be mapped with sentiment scores across a larger size of tweets to perform sentiment analysis. For sentiment analysis, these sentiment scores are afterwards concatenated into the training dataset. There are several Python libraries that are available, to use to accomplish this type of preprocessing in Natural Language Processing, for example TextBlob and Vader Analyzer. In this project, an open source package called Spacy will be introduced for polarization of larger data sets and be used for training and validation. As a result, we will have 80% of data for training and validation while 20% for testing.
 

@@ -1,4 +1,4 @@
-# 1. Abstract
+# Abstract
 
 ## FinDL - Fintech Deep Learning
 
