@@ -6,6 +6,8 @@
   Fine-tuned Models based on pretrained Hugging Face Transformers
 </h4>
 
+**upyterbook:** [Fine-tuned Transformers for Financial Sentiment Analysis](https://capstone-project-2023.readthedocs.io/en/latest/abstract.html)
+
 ## Usage
 
 ### From Command Line
